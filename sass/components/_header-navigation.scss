@@ -6,13 +6,17 @@
      
      @media screen and (min-width: 768px){
         display: flex;
-        align-items: center;  
+        align-items: center; 
      } 
+     @media screen and (max-width: 1199px){
+        margin-right: 80px;
+     }
+}
+.menu-mobile{
+    margin-bottom: 300px;
 }
 
 .page-header__menu{
-
-
     @media screen and (min-width: 768px){
         display: flex;
         margin-left: 90px;     
@@ -27,8 +31,16 @@
 .page-header__item{
     position: relative;
 
-    &:not(:last-child){
-        margin-right: 50px;
+    @media screen and (max-width: 767px){
+          &:not(:last-child){
+            margin-bottom: 32px;
+          }
+    }
+
+    @media screen and (min-width: 768px){
+          &:not(:last-child){
+            margin-right: 50px;
+        }
     }
 }
 
@@ -63,9 +75,15 @@
         
             position: absolute;
             left: 0;
-            bottom: -32px;
+            bottom: -37px;
             border-radius: 2px;
             background-color: var(--accent-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        &::after{
+            bottom: -32px;
         }
     }
 }

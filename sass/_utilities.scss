@@ -45,6 +45,9 @@ address{
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
+    @media screen and (max-width: 767px){
+      max-width: 480px;
+    }
 
     @media screen and (min-width: 768px) {
         width: 768px;
@@ -64,4 +67,14 @@ address{
         padding-bottom: 94px;
     }
 
+}
+
+.name-section{
+    font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        color: var(--dominant-color);
+        text-align: center;
+
+        margin-bottom: 50px;
 }
