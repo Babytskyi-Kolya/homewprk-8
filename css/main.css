@@ -436,26 +436,52 @@ address {
   height: 400px;
   text-align: center;
   background-color: #2F303A;
-  padding: 200px 0;
+  padding: 118px 0;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-background-mobile@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-mobile@2x.jpg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-background-mobile@1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-mobile@1x.jpg);
+    padding: 118px 0 118px 0;
     width: 480px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-background-tablet@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-tablet@2x.jpg);
+    padding: 118px 0 118px 0;
   }
 }
 @media screen and (min-width: 768px) {
   .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-background-tablet@1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-tablet@1x.jpg);
+    padding: 118px 0 118px 0;
     width: 768px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-background-desktop@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-desktop@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-background-desktop@1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-desktop@1x.jpg);
+    padding: 200px 0 200px 0;
     width: 1600px;
     height: 600px;
   }
@@ -490,14 +516,14 @@ address {
 .hero-section__button {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 0.533;
   border-radius: 4px;
   border-color: transparent;
   color: #FFFFFF;
   background-color: var(--accent-color);
   min-height: 54px;
-  min-width: 100%;
-  padding: 10px 32px;
+  width: 100%;
+  padding: 10px 24px;
   cursor: pointer;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -514,6 +540,9 @@ address {
 @media screen and (min-width: 1200px) {
   .hero-section__button {
     width: 216px;
+    padding-left: 32px;
+    padding-right: 32px;
+    line-height: 1.9;
   }
 }
 
@@ -660,6 +689,7 @@ address {
 }
 @media screen and (max-width: 767px) {
   .developers__item {
+    width: 450px;
     margin: 0 auto;
   }
   .developers__item:not(:last-child) {
@@ -790,6 +820,11 @@ address {
 .regular-clients__item {
   width: 100%;
   margin: 15px;
+}
+@media screen and (min-width: 480px) {
+  .regular-clients__item {
+    width: 210px;
+  }
 }
 @media screen and (min-width: 768px) {
   .regular-clients__item {
@@ -1379,17 +1414,17 @@ address {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 480px) {
+  .form-subscription__button {
+    width: 200px;
+  }
+}
 .form-subscription__button:hover, .form-subscription__button:focus {
   background-color: #FFFFFF;
   color: var(--dominant-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-}
-@media screen and (min-width) {
-  .form-subscription__button:hover, .form-subscription__button:focus {
-    width: 200px;
-  }
 }
 
 .form-subscription__icon {
