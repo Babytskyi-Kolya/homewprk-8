@@ -146,6 +146,7 @@ address {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
   }
 }
 
@@ -351,6 +352,11 @@ address {
     margin-bottom: 32px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .contact-list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .contact-list__item:not(:last-child) {
     margin-right: 50px;
@@ -552,7 +558,11 @@ address {
 
 .benefits-section__list {
   margin: -15px;
-  padding-bottom: 60px;
+}
+@media screen and (max-width: 1199px) {
+  .benefits-section__list {
+    padding-bottom: 60px;
+  }
 }
 @media screen and (min-width: 768px) {
   .benefits-section__list {
@@ -609,6 +619,11 @@ address {
   line-height: 1.14;
   color: var(--dominant-color);
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .benefits-section__title {
+    text-align: center;
+  }
 }
 
 .benefits-section__text {
@@ -1107,6 +1122,12 @@ address {
     font-size: 12px;
     line-height: 0.857;
     padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 
